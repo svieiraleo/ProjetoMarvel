@@ -1,0 +1,139 @@
+.marvel_characters {
+    
+    &__search { 
+        text-align: center; 
+
+        &_name {
+            border: 1px solid #7c7877;
+            box-sizing: border-box;
+            font-size: 27px; 
+            margin: 39px 0 10px; 
+            padding: 16px 19px; 
+            width: 66.8%; 
+            .box-shadow(0px 0px 20px 12px #e3dfdc); 
+            .border-radius(2px);
+
+            &:focus {
+                border-color: @color2;
+                outline: none;
+            }
+
+            @media screen and (max-width: 600px) {
+                width: 92%;
+            }
+
+            @media screen and (max-width: 420px) {
+                font-size: 22px;
+            }
+            
+            @media screen and (max-width: 350px) {
+                font-size: 18px;
+            }
+        }
+
+        &_favorites {
+            color: #c73d41;
+            display: block;
+            margin-bottom: 67px;
+
+            @media screen and (max-height: 667px) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__order {
+        border-bottom: 1px dashed #7c7877; 
+        display: none; 
+        height: 27px; 
+        padding-bottom: 47px; 
+        text-align: left;
+        
+        span { 
+            font-size: 21px; 
+        }
+        
+        label { 
+            font-size: 22px; 
+            margin-left: 11px; 
+        }
+        
+        .sort { 
+            margin-left: 17px;
+            vertical-align: 2px; 
+        }
+    }
+
+    &__content {
+        margin-bottom: 13px;
+
+        &_title {
+            visibility: hidden;
+            font-size: 0;
+        }
+
+        &__character { 
+            border-bottom: 1px dashed #7c7877; 
+            padding: 36px 0 25px; 
+            position: relative; 
+            text-align: left; 
+
+            @media screen and (max-height: 667px) {
+                padding-top: 20px;
+                padding-bottom: 15px;
+            }
+            
+            &:last-child { 
+                border: 0; 
+            }
+            
+            &_content { 
+                display: inline-block;
+                margin-right: auto;
+                padding: 0 5px 0 0; 
+                vertical-align: top;
+                width: calc(100% - 124px);
+            }
+
+            &_image {
+                display: inline-block;
+                margin: 0 0 0 auto;
+                padding: 0 10px 0 5px;
+                width: 100px;
+            }
+            
+            &_title { 
+                background: @color1;
+                color: #fff;
+                display: inline-block;
+                font-size: 42px; 
+                font-weight: 700;
+                letter-spacing: -2px;
+                margin: 0 0 2px;
+                padding: 0 6px 0 4px;
+                text-transform: uppercase;
+
+                @media screen and (max-width: 400px) {
+                    font-size: 34px;
+                }
+            }
+
+            &_subtitle {
+                margin-bottom: 0;
+            }
+            
+            &_info { 
+                p {
+                    color: #7c7877; 
+                    font-size: 15px;
+                }
+            }
+            
+            &_list {
+                list-style: circle inside;
+                padding-left: 10px;
+                margin: 5px 0 0;
+            }
+        }
+    }   
+}
