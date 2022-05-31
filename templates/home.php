@@ -1,6 +1,7 @@
 <?php 
 global $page;
 $page = basename(__FILE__, '.php');
+
 if (isset($_GET['showFav']))
 {
 	searchShowFav($_GET['showFav']);
